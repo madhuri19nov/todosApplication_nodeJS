@@ -98,7 +98,7 @@ app.get("/todos/", async (request, response) => {
           data = await db.all(getToDosQuery);
           response.send(
             data.map((eachItem) => {
-              outPutResult(eachItem);
+              return outPutResult(eachItem);
             })
           );
         } else {
@@ -131,7 +131,7 @@ app.get("/todos/", async (request, response) => {
           data = await db.all(getToDosQuery);
           response.send(
             data.map((eachItem) => {
-              outPutResult(eachItem);
+              return outPutResult(eachItem);
             })
           );
         } else {
@@ -156,7 +156,7 @@ app.get("/todos/", async (request, response) => {
         data = await db.all(getToDosQuery);
         response.send(
           data.map((eachItem) => {
-            outPutResult(eachItem);
+            return outPutResult(eachItem);
           })
         );
       } else {
@@ -177,7 +177,7 @@ app.get("/todos/", async (request, response) => {
         data = await db.all(getToDosQuery);
         response.send(
           data.map((eachItem) => {
-            outPutResult(eachItem);
+            return outPutResult(eachItem);
           })
         );
       } else {
@@ -197,7 +197,7 @@ app.get("/todos/", async (request, response) => {
       data = await db.all(getToDosQuery);
       response.send(
         data.map((eachItem) => {
-          outPutResult(eachItem);
+          return outPutResult(eachItem);
         })
       );
 
@@ -219,7 +219,7 @@ app.get("/todos/", async (request, response) => {
         data = await db.all(getToDosQuery);
         response.send(
           data.map((eachItem) => {
-            outPutResult(eachItem);
+            return outPutResult(eachItem);
           })
         );
       } else {
@@ -234,7 +234,7 @@ app.get("/todos/", async (request, response) => {
       data = await db.all(getToDosQuery);
       response.send(
         data.map((eachItem) => {
-          outPutResult(eachItem);
+          return outPutResult(eachItem);
         })
       );
   }
@@ -263,7 +263,7 @@ app.get("/agenda/", async (request, response) => {
     const dbResponse = await db.all(getDateQuery);
     response.send(
       dbResponse.map((eachItem) => {
-        outPutResult(eachItem);
+        return outPutResult(eachItem);
       })
     );
   } else {
